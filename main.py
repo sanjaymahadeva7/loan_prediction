@@ -41,6 +41,22 @@ def predict(model, user_input):
 # Streamlit UI
 def main():
     st.title('Loan Approval Prediction')
+
+    background_image_url = 'https://www.infomerics.com/admin/uploads/1612367957banner2.jpg'  # Replace with your image URL
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url("{background_image_url}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
     
     # Load model
     model = load_model()
