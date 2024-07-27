@@ -1,10 +1,11 @@
 import streamlit as st
 import pandas as pd
 import joblib
+from tensorflow.keras.models import load_model
 
 # Function to load the trained model
 def load_model():
-    model = joblib.load('decision_tree.pkl')
+    model = load_model('loan_approval_model.keras')
     return model
 
 # Function to preprocess data and make predictions
